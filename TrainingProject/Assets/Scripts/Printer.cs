@@ -5,15 +5,19 @@ using UnityEngine;
 public class Printer : MonoBehaviour
 {
     [SerializeField] private string message = "Hello world";
-    void Start()
+    private Display _display;
+
+    private void Awake()
     {
-        PrintingMessageOnConsole(message);
+        _display = new Display();
     }
 
-    void PrintingMessageOnConsole(string message)
+    void Start()
     {
-        print(message);
+        
     }
+
+    
 
 
 }
