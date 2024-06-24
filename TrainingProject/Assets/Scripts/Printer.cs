@@ -12,9 +12,13 @@ public class Printer : MonoBehaviour
         _display = new Display();
     }
 
-    void Start()
+    private void Start()
     {
-        
+        StartCoroutine(_display.PrintMessageWithFrequency(message,3));
+    }
+    public void ConsoleMessageOnTap()
+    {
+        _display.PrintMessageOnce(message);
     }
 
     
